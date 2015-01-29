@@ -36,9 +36,9 @@ app.get('/', function(req,res) {
 	    argument.enclosure = 'http://www.supremecourt.gov/media/audio/mp3files/' + argument.id + '.mp3';
 	    data.push(argument);
 	});
-	// data.sort(function(a,b) {
-	//     return a.date.valueOf() - b.date.valueOf();
-	// });
+	data.sort(function(a,b) {
+	    return b.date.valueOf() a.date.valueOf();
+	});
 
 	var feed = new RSS({
 	    title: 'Supreme Court Oral Arguments',
