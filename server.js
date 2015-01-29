@@ -43,7 +43,7 @@ app.get('/', function(req,res) {
 	var feed = new RSS({
 	    title: 'Supreme Court Oral Arguments',
 	    site_url: 'http://supreme-votech.rhcloud.com',
-	    description: 'scraped from the best',
+	    description: 'Supreme Court oral arguments are posted on http://www.supremecourt.gov.  This feed aggregates the recordings of those arguments in an RSS feed suitable for use in your favorite podcasting app or RSS reader.',
 	    webMaster: 'Mark Rothlisberger',
 	    feed_url: 'http://supreme-votech.rhcloud.com'
 	});
