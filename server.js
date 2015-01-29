@@ -37,7 +37,7 @@ app.get('/', function(req,res) {
 	    data.push(argument);
 	});
 	data.sort(function(a,b) {
-	    return b.date.valueOf() a.date.valueOf();
+	    return b.date.valueOf() - a.date.valueOf();
 	});
 
 	var feed = new RSS({
