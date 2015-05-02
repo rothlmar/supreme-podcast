@@ -35,7 +35,7 @@ app.get('/', function(req,res) {
 		date: moment(elt.parent.next.next.children[0].data, "MM/DD/YY")
 	    }
 	    argument.enclosure = 'http://www.supremecourt.gov/media/audio/mp3files/';
-	    argument.enclosure += path.parse(argument.href).name;
+	    argument.enclosure += path.basename(argument.href);
 	    argument.enclosure += '.mp3';
 	    // console.log(argument.enclosure);
 	    data.push(argument);
