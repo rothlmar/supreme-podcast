@@ -37,7 +37,7 @@ app.get('/', function(req,res) {
 	    argument.enclosure = 'http://www.supremecourt.gov/media/audio/mp3files/';
 	    argument.enclosure += path.parse(argument.href).name;
 	    argument.enclosure += '.mp3';
-	    console.log(argument.enclosure);
+	    // console.log(argument.enclosure);
 	    data.push(argument);
 	});
 	data.sort(function(a,b) {
