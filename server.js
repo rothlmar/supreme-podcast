@@ -2,6 +2,7 @@
 //  OpenShift sample Node application
 var express = require('express');
 var fs      = require('fs');
+var path = require('path');
 var request = require('request');
 var cheerio = require('cheerio');
 var moment = require('moment');
@@ -33,7 +34,10 @@ app.get('/', function(req,res) {
 		datestr: elt.parent.next.next.children[0].data,
 		date: moment(elt.parent.next.next.children[0].data, "MM/DD/YY")
 	    }
-	    argument.enclosure = 'http://www.supremecourt.gov/media/audio/mp3files/' + argument.id + '.mp3';
+	    argument.enclosure = 'http://www.supremecourt.gov/media/audio/mp3files/';
+	    argument.enclosure += path.parse(argument.href).name;
+	    argument.enclosure += '.mp3';
+	    console.log(argument.enclosure);
 	    data.push(argument);
 	});
 	data.sort(function(a,b) {
